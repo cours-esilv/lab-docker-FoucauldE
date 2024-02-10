@@ -1,0 +1,2 @@
+docker run -d -e CURRENT_ENVIRONMENT=development -p 5000:5000 --name back_container foucaulde/flaskrepo:1.0
+docker run -d -p 80:80 --name front-container -e WS_BACK_URL=http://back_container:5000 foucaulde/repofrontflask
